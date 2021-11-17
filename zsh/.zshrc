@@ -4,12 +4,11 @@
 PATH=$HOME/.composer/vendor/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/bigl/.oh-my-zsh
+export ZSH=/home/bigl/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
 ZSH_THEME="candy"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -17,7 +16,7 @@ ZSH_THEME="candy"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -32,7 +31,7 @@ ZSH_THEME="candy"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -88,3 +87,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PYTHONPATH=~/www/learn_python
+export JAVA_HOME=/snap/android-studio/current/android-studio/jre
+export CURRENT_UID=$(id -u):$(id -g)
+#eval "$(starship init zsh)"

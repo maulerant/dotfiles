@@ -55,10 +55,10 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+h focus left
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -67,10 +67,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h move left
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -79,7 +79,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+Semicolon split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -187,17 +187,20 @@ exec --no-startup-id feh --bg-scale /home/bigl/Backgrounds/python-snake.jpg
 ### Запуск программ
 bindsym $mod+F1 exec --no-startup-id telegram-desktop workspace 1
 
-bindsym $mod+F2 exec --no-startup-id firefox; workspace 2
-bindsym $mod+Shift+F2 exec --no-startup-id chromium; workspace 2
+bindsym $mod+F2 exec --no-startup-id google-chrome; workspace 2
+bindsym $mod+Shift+F2 exec --no-startup-id firefox; workspace 2
 
 bindsym $mod+F3 exec --no-startup-id phpstorm; workspace 3
+bindsym $mod+Shift+F3 exec --no-startup-id android-studio; workspace 3
+bindsym $mod+Ctrl+F3 exec --no-startup-id code; workspace 3
 
-bindsym $mod+g exec --no-startup-id gvim; workspace 4
+bindsym $mod+g exec --no-startup-id gvim ~/Рабочий\ стол/ssh.txt; workspace 4
 bindsym $mod+Shift+G exec --no-startup-id killall -s 6 gvim
 
 bindsym $mod+F4 exec --no-startup-id libreoffice --writer
 bindsym $mod+F5 exec --no-startup-id libreoffice --calc
 bindsym $mod+p exec --no-startup-id flameshot gui
+bindsym $mod+y exec --no-startup-id screenkey
 
 ### Cпрятать окно, чтобы оно не мешалось, но в то же время было всегда под рукой. 
 ### Можно добавить несколько окон и переключаться между ними. 

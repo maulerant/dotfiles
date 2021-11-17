@@ -20,8 +20,8 @@ set nocompatible
 syntax on
 filetype plugin indent on
 
-let mapleader=","
-let maplocalleader=","
+let mapleader=" "
+let maplocalleader=" "
 set encoding=utf-8
 set modelines=0 " security
 
@@ -85,6 +85,7 @@ let g:matchparen_insert_timeout = 20
 
 set fillchars+=vert:│
 set diffopt+=foldcolumn:0
+set guifont=Anonymice\ Nerd\ Font\ Regular\ 12
 
 " Cursor shape
 
@@ -145,7 +146,6 @@ Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ryanoasis/vim-devicons'
 
 Plug 'kshenoy/vim-signature'
 
@@ -154,6 +154,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'lifepillar/vim-gruvbox8'
 
 " Linters, autocompletions
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
@@ -183,6 +185,7 @@ Plug 'noahfrederick/vim-laravel'
 " Plug 'vim-syntastic/syntastic'
 Plug 'aserebryakov/vim-todo-lists'
 " On-demand lazy load
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
