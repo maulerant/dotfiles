@@ -86,6 +86,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias sail="docker exec -it docker_web_1 "
+
 export PYTHONPATH=~/www/learn_python
 export JAVA_HOME=/snap/android-studio/current/android-studio/jre
 export CURRENT_UID=$(id -u):$(id -g)
