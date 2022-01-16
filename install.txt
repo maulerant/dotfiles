@@ -1,0 +1,47 @@
+sudo apt install -y tmux zsh mc vim python3-pip i3 php git flameshot curl ripgrep python3.10
+sudo apt -y install dirmngr apt-transport-https lsb-release ca-certificates polybar
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+sudo snap install code --classic
+sudo snap install node --classic
+sudo snap install flutter --classic
+sudo snap install android-studio --classic
+sudo snap install phpstorm --classic
+sudo snap install neovim --classic
+
+curl -sS https://getcomposer.org/installer -o composer-setup.php
+php -r "if (php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa72f40b5f787e49f22d4c2f19492ac310e8cba5b96ac8b64115ac402c8cd292b8a03482574915d1a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.10 
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo usermod -aG docker $USER
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose && sudo chmod a+x /usr/bin/docker-compose
+newgrp docker 
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+
+sudo snap install obs-studio --classic
+
+ssh-keygen -t ed25519 -C "ilashyn@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+git clone git@github.com:maulerant/dotfiles.git
+
+git config --global user.email "ilashyn@gmail.com"
+git config --global user.name "Igor Lashyn"
+
+sudo chsh -s /bin/zsh bigl
+
+sudo apt install usb-creator-gtk
