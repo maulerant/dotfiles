@@ -49,3 +49,6 @@ sudo apt install usb-creator-gtk
 curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install > install
 fish install
 chsh -s /usr/bin/fish
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
